@@ -9,10 +9,12 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 const Navbar = () => {
   return (
     <nav id="navbar" className={styles.navbar}>
+      <br />
       <div className="hidden md:flex md:w-[60%] flex pl-3">
         <img src="/next.svg" alt="Logo" className="w-[70%]" />
       </div>
-
+<br />
+<br />
       <ul className={styles.navLinks}>
         <li className="  text-white">
           <Link className="md:hidden md:block" href="/home">

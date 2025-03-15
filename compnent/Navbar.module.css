@@ -10,7 +10,9 @@
   align-items: center;
   background-color: #272623;
   transition-duration: 1s;
+  border: 2px solid white;
 }
+
 
 .navLinks {
   list-style: none;
