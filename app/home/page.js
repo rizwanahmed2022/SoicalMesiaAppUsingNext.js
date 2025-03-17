@@ -3,18 +3,13 @@ import "@fortawesome/fontawesome-svg-core/styles.css"; // Import Font Awesome CS
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; // Prevent Font Awesome from auto-adding CSS
 import { useState } from "react";
-import { useRouter } from 'next/navigation'
-
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-
-
-
-  const router = useRouter()
-  function moveto(){
-    ()=>router.push('/profile');
+  const router = useRouter();
+  function moveto() {
+    () => router.push("/profile");
   }
-
 
   const [num, setNum] = useState(" 0");
   function like() {
@@ -23,7 +18,6 @@ export default function Home() {
       setNum(" 0");
     }
   }
-
 
   function display() {
     let y = document.getElementById("follwing");
@@ -61,7 +55,6 @@ export default function Home() {
     b.className = " md:w-1/15 flex justify-end items-start";
     a.appendChild(b);
 
-
     let image = document.createElement("img");
     image.src =
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SGd3hrFih4myNDpd3LKAMkKlUGD3sOiHaQ&s";
@@ -81,12 +74,10 @@ export default function Home() {
     e.className = "flex items-baseline";
     d.appendChild(e);
 
-    
     let f = document.createElement("p");
     f.className = "font-bold hover:underline cursor-pointer active:underline";
     e.appendChild(f);
     f.innerHTML = "Rizwan Ahmed";
-
 
     let g = document.createElement("p");
     g.className = "px-3 text-[12px] text-gray-400";
@@ -130,6 +121,8 @@ export default function Home() {
     l.appendChild(o);
     l.appendChild(p);
 
+    let zz = document.getElementById("follwing");
+    zz.appendChild(a);
     let z = document.getElementById("foryou");
     z.appendChild(a);
   }
@@ -142,7 +135,7 @@ export default function Home() {
           onClick={display}
           className=" bg-[#171616] shadow-inner shadow-blackr p-[10px] text-center  w-1/2"
         >
-          For you
+          My Posts
         </p>
         <p
           id="follwingbutton"
@@ -157,12 +150,12 @@ export default function Home() {
         <div id="foryou" className="flex flex-col   w-full">
           <div className="w-full p-3 md:px-9">
             <div className=" flex">
-                <img
-                  onClick={()=>router.push("/profile")}
-                  className="w-13 h-13 rounded-full"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SGd3hrFih4myNDpd3LKAMkKlUGD3sOiHaQ&s"
-                  alt=""
-                />
+              <img
+                onClick={() => router.push("/profile")}
+                className="w-13 h-13 rounded-full"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SGd3hrFih4myNDpd3LKAMkKlUGD3sOiHaQ&s"
+                alt=""
+              />
               <textarea
                 name="post"
                 id="post"
@@ -199,20 +192,26 @@ export default function Home() {
             >
               <div className=" md:w-1/15 flex justify-end items-start">
                 <img
-                  onClick={() => router.push('/profile')}
+                  onClick={() => router.push("/profile")}
                   className="active:border-2 w-[45px] h-[40px] md:w-[50px] md:h-[50px] rounded-full"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SGd3hrFih4myNDpd3LKAMkKlUGD3sOiHaQ&s"
                   alt=""
-                  />
+                />
               </div>
 
               <div className=" w-full pl-3">
                 <div className=" w-full flex justify-between">
                   <div className="flex items-baseline">
-                    <h1 onClick={() => router.push('/profile')} className="active:text-blue-700 font-bold hover:underline cursor-pointer active:underline">
+                    <h1
+                      onClick={() => router.push("/profile")}
+                      className="active:text-blue-700 font-bold hover:underline cursor-pointer active:underline"
+                    >
                       Rizwan Ahmed
                     </h1>
-                    <p onClick={() => router.push('/profile')} className="cursor-pointer hover:underline px-3 text-[12px] text-gray-400">
+                    <p
+                      onClick={() => router.push("/profile")}
+                      className="cursor-pointer hover:underline px-3 text-[12px] text-gray-400"
+                    >
                       @rizwanahmed
                     </p>
                   </div>
@@ -226,7 +225,6 @@ export default function Home() {
                   Quetta Gladiators owner Nadeem Omar has announced Pakistan’s
                   Champions Trophy winning captain Sarfaraz Ahmad as Team
                   Director of the franchise. Sarfaraz led Gladiators to their
-              
                 </p>
 
                 <div className="flex justify-between border border-gray-700 px-3 py-2 ">
@@ -246,8 +244,183 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="follwing" className="  hidden w-full">
-          follwing
+        <div id="follwing" className="flex-col hidden w-full">
+          <div className="w-full p-3 md:px-9">
+            <div
+              id="post2"
+              className=" border-b border-gray-500 py-3 px-2 w-full mt-13 flex"
+            >
+              <div className=" md:w-1/15 flex justify-end items-start">
+                <img
+                  onClick={() => router.push("/profile")}
+                  className="active:border-2 w-[45px] h-[40px] md:w-[50px] md:h-[50px] rounded-full"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SGd3hrFih4myNDpd3LKAMkKlUGD3sOiHaQ&s"
+                  alt=""
+                />
+              </div>
+
+              <div className=" w-full pl-3">
+                <div className=" w-full flex justify-between">
+                  <div className="flex items-baseline">
+                    <h1
+                      onClick={() => router.push("/profile")}
+                      className="active:text-blue-700 font-bold hover:underline cursor-pointer active:underline"
+                    >
+                      Rizwan Ahmed
+                    </h1>
+                    <p
+                      onClick={() => router.push("/profile")}
+                      className="cursor-pointer hover:underline px-3 text-[12px] text-gray-400"
+                    >
+                      @rizwanahmed
+                    </p>
+                  </div>
+
+                  <div>
+                    <i className="bi bi-three-dots px-4 text-gray-300 hover:text-white"></i>
+                    <i className="bi bi-x px-4 text-gray-300 hover:text-white"></i>
+                  </div>
+                </div>
+                <p className=" leading-4 text-[13px] md:text-[16px] md:leading-5 py-2 tracking-wider ">
+                  Quetta Gladiators owner Nadeem Omar has announced Pakistan’s
+                  Champions Trophy winning captain Sarfaraz Ahmad as Team
+                  Director of the franchise. Sarfaraz led Gladiators to their
+                </p>
+
+                <div className="flex justify-between border border-gray-700 px-3 py-2 ">
+                  <i
+                    onClick={like}
+                    className="bi bi-hand-thumbs-up-fill not-italic"
+                  >
+                    {num}
+                  </i>
+                  <i className="bi bi-chat-fill"></i>
+                  <i className="bi bi-repeat"></i>
+                  <i className="bi bi-bookmark"></i>
+                  <i className="bi bi-share "></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="post2"
+              className=" border-b border-gray-500 py-3 px-2 w-full mt-13 flex"
+            >
+              <div className=" md:w-1/15 flex justify-end items-start">
+                <img
+                  onClick={() => router.push("/profile")}
+                  className="active:border-2 w-[45px] h-[40px] md:w-[50px] md:h-[50px] rounded-full"
+                  src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div className=" w-full pl-3">
+                <div className=" w-full flex justify-between">
+                  <div className="flex items-baseline">
+                    <h1
+                      onClick={() => router.push("/profile")}
+                      className="active:text-blue-700 font-bold hover:underline cursor-pointer active:underline"
+                    >
+                      Ahmed ALi
+                    </h1>
+                    <p
+                      onClick={() => router.push("/profile")}
+                      className="cursor-pointer hover:underline px-3 text-[12px] text-gray-400"
+                    >
+                      @ahemdali
+                    </p>
+                  </div>
+
+                  <div>
+                    <i className="bi bi-three-dots px-4 text-gray-300 hover:text-white"></i>
+                    <i className="bi bi-x px-4 text-gray-300 hover:text-white"></i>
+                  </div>
+                </div>
+                <p className=" leading-4 text-[13px] md:text-[16px] md:leading-5 py-2 tracking-wider ">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officiis assumenda, obcaecati dicta voluptatem, nostrum totam
+                  in consectetur, consequatur dolorem eos unde temporibus? Eum,
+                  harum laudantium quae velit cum odit maiores? Lorem ipsum
+                  dolor sit amet consectetur, adipisicing elit. Officiis
+                  assumenda, obcaecati dicta voluptatem, nostrum totam in
+                  consectetur, consequatur dolorem eos unde temporibus? Eum,
+                  harum laudantium quae velit cum odit maiores?
+                </p>
+
+                <div className="flex justify-between border border-gray-700 px-3 py-2 ">
+                  <i
+                    onClick={like}
+                    className="bi bi-hand-thumbs-up-fill not-italic"
+                  >
+                    {num}
+                  </i>
+                  <i className="bi bi-chat-fill"></i>
+                  <i className="bi bi-repeat"></i>
+                  <i className="bi bi-bookmark"></i>
+                  <i className="bi bi-share "></i>
+                </div>
+              </div>
+            </div>
+            <div
+              id="post2"
+              className=" border-b border-gray-500 py-3 px-2 w-full mt-13 flex"
+            >
+              <div className=" md:w-1/15 flex justify-end items-start">
+                <img
+                  onClick={() => router.push("/profile")}
+                  className="active:border-2 w-[45px] h-[40px] md:w-[50px] md:h-[50px] rounded-full"
+                  src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+              </div>
+
+              <div className=" w-full pl-3">
+                <div className=" w-full flex justify-between">
+                  <div className="flex items-baseline">
+                    <h1
+                      onClick={() => router.push("/profile")}
+                      className="active:text-blue-700 font-bold hover:underline cursor-pointer active:underline"
+                    >
+                      Rehan Manzoor
+                    </h1>
+                    <p
+                      onClick={() => router.push("/profile")}
+                      className="cursor-pointer hover:underline px-3 text-[12px] text-gray-400"
+                    >
+                      @rehanmanzoor
+                    </p>
+                  </div>
+
+                  <div>
+                    <i className="bi bi-three-dots px-4 text-gray-300 hover:text-white"></i>
+                    <i className="bi bi-x px-4 text-gray-300 hover:text-white"></i>
+                  </div>
+                </div>
+                <p className=" leading-4 text-[13px] md:text-[16px] md:leading-5 py-2 tracking-wider ">
+                  consequatur dolorem eos unde temporibus? Eum,
+                  harum laudantium quae velit cum odit maiores? Lorem ipsum
+                  dolor sit amet consectetur, adipisicing elit. Officiis
+                  assumenda, obcaecati dicta voluptatem, nostrum totam in
+                  consectetur, consequatur dolorem eos unde temporibus? Eum,
+                  harum laudantium quae velit cum odit maiores?
+                </p>
+
+                <div className="flex justify-between border border-gray-700 px-3 py-2 ">
+                  <i
+                    onClick={like}
+                    className="bi bi-hand-thumbs-up-fill not-italic"
+                  >
+                    {num}
+                  </i>
+                  <i className="bi bi-chat-fill"></i>
+                  <i className="bi bi-repeat"></i>
+                  <i className="bi bi-bookmark"></i>
+                  <i className="bi bi-share "></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
