@@ -2,10 +2,20 @@
 import "@fortawesome/fontawesome-svg-core/styles.css"; // Import Font Awesome CSS
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; // Prevent Font Awesome from auto-adding CSS
-import Swal from "sweetalert2";
 import { useState } from "react";
+import { useRouter } from 'next/navigation'
+
 
 export default function Home() {
+
+
+
+  const router = useRouter()
+  function moveto(){
+    ()=>router.push('/profile');
+  }
+
+
   const [num, setNum] = useState(" 0");
   function like() {
     if (num === " 0") setNum(" 1");
@@ -13,6 +23,8 @@ export default function Home() {
       setNum(" 0");
     }
   }
+
+
   function display() {
     let y = document.getElementById("follwing");
     y.style.display = "none";
@@ -49,6 +61,7 @@ export default function Home() {
     b.className = " md:w-1/15 flex justify-end items-start";
     a.appendChild(b);
 
+
     let image = document.createElement("img");
     image.src =
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SGd3hrFih4myNDpd3LKAMkKlUGD3sOiHaQ&s";
@@ -68,10 +81,12 @@ export default function Home() {
     e.className = "flex items-baseline";
     d.appendChild(e);
 
+    
     let f = document.createElement("p");
     f.className = "font-bold hover:underline cursor-pointer active:underline";
     e.appendChild(f);
     f.innerHTML = "Rizwan Ahmed";
+
 
     let g = document.createElement("p");
     g.className = "px-3 text-[12px] text-gray-400";
@@ -96,7 +111,8 @@ export default function Home() {
     text.value = "";
 
     let l = document.createElement("div");
-    l.className = "  cursor-pointer flex justify-between border border-gray-700 px-3 py-2  ";
+    l.className =
+      "  cursor-pointer flex justify-between border border-gray-700 px-3 py-2  ";
     c.appendChild(l);
 
     let m = document.createElement("i");
@@ -105,7 +121,7 @@ export default function Home() {
     let p = document.createElement("i");
     m.className = "bi bi-hand-thumbs-up-fill not-italic";
     m.innerHTML = `${num}`;
-    m.onclick = {like};
+    m.onclick = { like };
     n.className = "bi bi-chat-fill no-italic";
     o.className = "bi bi-repeat no-italic";
     p.className = "bi bi-share no-italic";
@@ -117,8 +133,6 @@ export default function Home() {
     let z = document.getElementById("foryou");
     z.appendChild(a);
   }
-
-  
 
   return (
     <div className=" justify-center items-start">
@@ -143,11 +157,12 @@ export default function Home() {
         <div id="foryou" className="flex flex-col   w-full">
           <div className="w-full p-3 md:px-9">
             <div className=" flex">
-              <img
-                className="w-13 h-13 rounded-full"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SGd3hrFih4myNDpd3LKAMkKlUGD3sOiHaQ&s"
-                alt=""
-              />
+                <img
+                  onClick={()=>router.push("/profile")}
+                  className="w-13 h-13 rounded-full"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SGd3hrFih4myNDpd3LKAMkKlUGD3sOiHaQ&s"
+                  alt=""
+                />
               <textarea
                 name="post"
                 id="post"
@@ -184,19 +199,20 @@ export default function Home() {
             >
               <div className=" md:w-1/15 flex justify-end items-start">
                 <img
-                  className="w-[45px] h-[40px] md:w-[50px] md:h-[50px] rounded-full"
+                  onClick={() => router.push('/profile')}
+                  className="active:border-2 w-[45px] h-[40px] md:w-[50px] md:h-[50px] rounded-full"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SGd3hrFih4myNDpd3LKAMkKlUGD3sOiHaQ&s"
                   alt=""
-                />
+                  />
               </div>
 
               <div className=" w-full pl-3">
                 <div className=" w-full flex justify-between">
                   <div className="flex items-baseline">
-                    <h1 className="font-bold hover:underline cursor-pointer active:underline">
+                    <h1 onClick={() => router.push('/profile')} className="active:text-blue-700 font-bold hover:underline cursor-pointer active:underline">
                       Rizwan Ahmed
                     </h1>
-                    <p className="px-3 text-[12px] text-gray-400">
+                    <p onClick={() => router.push('/profile')} className="cursor-pointer hover:underline px-3 text-[12px] text-gray-400">
                       @rizwanahmed
                     </p>
                   </div>
@@ -210,7 +226,8 @@ export default function Home() {
                   Quetta Gladiators owner Nadeem Omar has announced Pakistan’s
                   Champions Trophy winning captain Sarfaraz Ahmad as Team
                   Director of the franchise. Sarfaraz led Gladiators to their
-                {num}</p>
+              
+                </p>
 
                 <div className="flex justify-between border border-gray-700 px-3 py-2 ">
                   <i

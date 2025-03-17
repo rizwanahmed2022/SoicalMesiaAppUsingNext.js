@@ -10,7 +10,6 @@
   align-items: center;
   background-color: #272623;
   transition-duration: 1s;
-  border: 2px solid white;
 }
 
 
@@ -41,8 +40,16 @@
   padding-left: 0;
 }
 
+
+
+
 .navLinks li:hover {
   background-color: rgba(0, 0, 0, 0.321);
+}
+
+
+.thisis{
+  display: none;
 }
 
 
